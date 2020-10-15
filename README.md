@@ -14,3 +14,6 @@ The IL denotes that part of the knowledge contained in the source models cannot 
 
 The proposed approach is supported by a prototype tool that we demonstrate and validate.
 
+---
+## Proposed Approach
+![Proposed Approach](resources/approach.png)

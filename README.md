@@ -17,3 +17,15 @@ The proposed approach is supported by a prototype tool that we demonstrate and v
 ---
 ## Proposed Approach
 ![Proposed Approach](resources/approach.png)
+
+---
+## What the repository contains
+This repository contains all the artifacts needed to evaluate the process presented in the paper. 
+Specifically, the evaluation has been done by considering the model CompanyModel.xmi and the transformation Company2CRM.  
+The refactorings R1–R7  described in the  paper have been singularly applied on the Company metamodel, and all the possible migration alternatives of CompanyModel.xmi and Company2CRM are automatically generated.
+
+In particular:
+- in the ***m*** folder, we have all the models used for the evaluation with all the alternatives of CompanyModel.xmi.
+- in the ***mm*** folder for each refactoring,we have the related Company.ecore metamodel.
+- in the ***t*** folder for each refactoring, we have all the Company2CRM transformation alternatives.
+

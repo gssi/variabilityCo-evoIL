@@ -1,0 +1,64 @@
+
+module Company2CRM;
+create OUT : CRM from IN : Company;
+
+rule Company2CRM{
+	from s: Company!Company
+	to t: CRM!CRM(
+		address <- 'www.'+s.name+'.com/'+s.city,
+		accounts <- s.persons,
+		projects<-s.projects,
+		groups<- s.lines
+	)
+}
+rule Person2Worker{
+	from s: Company!Employee
+	to t: CRM!Account(
+	username <- s.fullName	,
+	group<-s.employed
+	),
+	t1: CRM!Worker(
+	account<-t,
+	name <- s.fullName
+	
+	)
+}
+rule Person2Client{
+	from s: Company!Client
+	to t: CRM!Account(
+	username <- s.fullName,
+	group<-s.employed	
+	),
+	t1: CRM!Client(
+	account<-t	,
+	name <- s.fullName
+	)
+	
+}
+rule European2Project{
+	
+	from s: Company!Project
+	to t: CRM!Project(
+		name<-s.name
+		,
+		--area<- s.related.id
+		area<- s.related.category.name
+	)
+}
+
+rule Unit2Group{
+from s: Company!Unit
+to t: CRM!Group(
+name<-s.name	
+)
+}
+rule ServiceLine2Group{
+from s: Company!ServiceLine
+to t: CRM!Group(
+name<-s.name	
+)
+}
+
+
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<crm:CRM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:crm="http://cs.gssi.it/crmMM" address="www.IBM.com/L'Aquila">
+  <projects name="BIRDS" area="Techology Transfer" budget="500000"/>
+  <projects name="AdvAq" area="Techology Transfer" budget="10000"/>
+  <groups name="SE"/>
+  <groups name="Development"/>
+</crm:CRM>

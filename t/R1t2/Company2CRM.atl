@@ -1,0 +1,59 @@
+-- @path Company=/SOSYM2019/model/Company.ecore
+-- @path CRM=/SOSYM2019/model/CRM.ecore
+
+module Company2CRM;
+create OUT : CRM from IN : Company;
+
+rule Company2CRM{
+	from s: Company!Company
+	to t: CRM!CRM(
+		address <- 'www.'+s.name+'.com/'+s.address.city,
+		accounts <- s.persons,
+		projects<-s.projects,
+		groups<- s.lines
+	)
+}
+rule Person2Worker{
+	from s: Company!Client
+	to t: CRM!Account(
+	username <- s.firstname+'.'+s.lastname	,
+	group<-s.employed
+	),
+	t1: CRM!Worker(
+	account<-t,
+	name <- s.firstname+' '+s.lastname
+	
+	)
+}
+
+rule European2Project{
+	
+	from s: Company!European
+	to t: CRM!Project(
+		name<-s.name,
+		area<- s.related.name,
+		budget<-s.budget
+	)
+}
+rule National2Project{
+	
+	from s: Company!National
+	to t: CRM!Project(
+		name<-s.name,
+		area<- s.related.name,
+		budget<-s.budget
+	)
+}
+rule Unit2Group{
+from s: Company!Unit
+to t: CRM!Group(
+name<-s.name	
+)
+}
+rule ServiceLine2Group{
+from s: Company!ServiceLine
+to t: CRM!Group(
+name<-s.name	
+)
+}
+

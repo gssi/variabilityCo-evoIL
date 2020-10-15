@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:crm="http://cs.gssi.it/crmMM">
+  <crm:CRM address="www.IBM.com/L'Aquila">
+    <accounts username="Ludovico." group="/0/@groups.1"/>
+    <accounts username="Francesco.." group="/0/@groups.1"/>
+    <accounts username="Davide.."/>
+    <projects name="BIRDS" area="Techology Transfer" budget="500000"/>
+    <projects name="AdvAq" area="Techology Transfer"/>
+    <groups name="SE"/>
+    <groups name="Development"/>
+  </crm:CRM>
+  <crm:Worker name="Ludovico " account="/0/@accounts.0"/>
+  <crm:Worker name="Francesco ." account="/0/@accounts.1"/>
+  <crm:Client name="Davide ." account="/0/@accounts.2"/>
+</xmi:XMI>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company:CompanyModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:company="http://cs.gssi.it/company/R2">
+  <categories
+      name="Techology Transfer"
+      topics="//@topics.0 //@topics.1"/>
+  <topics id="99"
+      category="//@categories.0"/>
+  <topics id="10"
+      category="//@categories.0"/>
+  <address city="L'Aquila"
+      completeAddress="V.le Crispi"/>
+</company:CompanyModel>
